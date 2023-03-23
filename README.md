@@ -1,1 +1,1 @@
-# jex-assessment
+# JEX Frontend assessment
