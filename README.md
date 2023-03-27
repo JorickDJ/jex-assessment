@@ -9,5 +9,5 @@ npm run db
 
 and after that, you can serve the application with:
 ```
-npm run serve
+npm run start
 ```
