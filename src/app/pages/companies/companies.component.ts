@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { combineLatest, map, mergeMap, Observable, repeatWhen, startWith, Subject, take } from 'rxjs';
 import { DialogConfig } from 'src/app/core/classes/dialog-config.class';
 import { Company } from 'src/app/core/interfaces/company.interface';
-import { CreateVacancyComponent } from 'src/app/shared/components/create-vacancy/create-vacancy.component';
+import { CreateVacancyComponent } from 'src/app/pages/companies/components/create-vacancy/create-vacancy.component';
 import { CompaniesService } from 'src/app/shared/services/companies.service';
 import { DialogService } from 'src/app/shared/services/dialog.service';
 
@@ -23,7 +23,10 @@ export class CompaniesComponent implements OnInit {
     this.companies$ = this.vacancyAdded$.pipe(startWith(null), mergeMap(() => this.companiesService.getCompanies()));
   }
 
-  openDialog(company: Company): void {
+  openDialog(event: MouseEvent, company: Company): void {
+    //Stop propagation to parent, otherwise the route navigation is also called.
+    event.stopPropagation();
+
     const dialog = this.dialogService.open<CreateVacancyComponent>(CreateVacancyComponent, new DialogConfig<Company>(company));
     dialog.afterClosed$.pipe(take(1)).subscribe(x => this.vacancyAdded$.next());
   }

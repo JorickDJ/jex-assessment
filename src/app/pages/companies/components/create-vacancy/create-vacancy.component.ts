@@ -1,18 +1,17 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { config } from 'rxjs';
 import { Company } from 'src/app/core/interfaces/company.interface';
 import { DialogConfig } from 'src/app/core/classes/dialog-config.class';
 import {
   DATA_INJECTION_TOKEN,
   DialogService,
-} from '../../services/dialog.service';
+} from '../../../../shared/services/dialog.service';
 import {
   FormBuilder,
   FormControl,
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { CompaniesService } from '../../services/companies.service';
+import { CompaniesService } from '../../../../shared/services/companies.service';
 import { Vacancy } from 'src/app/core/interfaces/vacancy.interface';
 
 @Component({
