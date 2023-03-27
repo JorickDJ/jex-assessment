@@ -1,0 +1,28 @@
+<div class="flex content-center flex-wrap flex-col">
+    <button class="rounded bg-slate-600 py-2 px-4 text-white self-start" routerLink="/">Go back</button>
+    <ng-container *ngIf="company$ | async as company">
+        <div class="w-6/12 mt-3 self-center">
+            <div class="text-xl font-bold">{{ company.name }}</div>
+            <div class="mt-2">{{ company.description }}</div>
+            <div class="mt-2">Employees: {{ company.employees | numberFormat }}</div>
+            <div class="mt-2">Location: {{ company.address.city }}, {{ company.address.country }} </div>
+        </div>
+        <div class="w-full mt-8">
+            <h2 class="text-xl font-bold mb-0">Vacancies:</h2>
+            <app-list>
+                <app-list-item *ngFor="let vacancy of company.vacancies">
+                    <div list-item-title>
+                        {{ vacancy.title }}
+                    </div>
+                    <div list-item-content>
+                        <div>{{ vacancy.description }}</div>
+                        <div class="text-sm text-slate-500">
+                            {{ vacancy.hours }}h, {{ vacancy.location }}
+                        </div>
+                    </div>
+                </app-list-item>
+            </app-list>
+        </div>
+    </ng-container>
+
+</div>

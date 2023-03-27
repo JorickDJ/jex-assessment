@@ -1,0 +1,6 @@
+<div class="flex flex-col justify-center bg-white rounded drop-shadow-md p-3 hover:drop-shadow-lg hover:cursor-pointer" (click)="itemClicked.emit()">
+    <div class="text-lg font-bold">
+        <ng-content select="[list-item-title]"></ng-content>
+    </div>
+    <ng-content select="[list-item-content]"></ng-content>
+</div>

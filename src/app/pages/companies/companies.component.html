@@ -1,0 +1,22 @@
+<app-list>
+    <app-list-item *ngFor="let company of companies$ | async" (itemClicked)="navigate(company)">
+        <div list-item-title>{{ company.name }}</div>
+        <div list-item-content class="flex justify-between">
+            <div class="flex justify-between items-center w-3/5">
+                <span>
+                    Location: {{ company.address.city }}, {{ company.address.country }}
+                </span>
+                <span>
+                    Employees: {{ company.employees | numberFormat }}
+                </span>
+                <span>
+                    Vacancies: {{ company.vacancies.length }}
+                </span>
+            </div>
+            <div>
+                <button class="bg-slate-600 rounded text-white py-2 px-3 text-sm" (click)="openDialog(company)">Add
+                    vacancy</button>
+            </div>
+        </div>
+    </app-list-item>
+</app-list>

@@ -1,0 +1,10 @@
+<div class="bg-white p-6 rounded shadow-md min-w-fit">
+    <form class="flex flex-col gap-3 mb-3" [formGroup]="form">
+        <input class="w-full p-3 rounded bg-gray-50 outline-none" type="text" formControlName="title" placeholder="Title*" />
+        <textarea class="w-full p-3 rounded bg-gray-50 outline-none" formControlName="description" placeholder="Description"></textarea>
+        <input class="w-full p-3 rounded bg-gray-50 outline-none" type="number" formControlName="hours" placeholder="Hours" />
+        <input class="w-full p-3 rounded bg-gray-50 outline-none" type="text" formControlName="location" placeholder="Location" />
+    </form>
+
+    <button class="w-full rounded bg-slate-600 disabled:bg-slate-300 text-white py-3 px-4 text-sm uppercase" [disabled]="form.invalid" (click)="save()">Add</button>
+</div>

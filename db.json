@@ -1,0 +1,105 @@
+{
+  "companies": [
+    {
+      "id": 1,
+      "name": "JEX",
+      "description": "",
+      "address": {
+        "city": "Rotterdam",
+        "country": "Netherlands"
+      },
+      "employees": 260,
+      "vacancies": [
+        {
+          "id": 1,
+          "title": "Frontend Developer",
+          "description": "Looking for a frontend developer",
+          "hours": 40,
+          "location": "Rotterdam"
+        },
+        {
+          "title": "Fullstack",
+          "description": "Fullstack",
+          "hours": 40,
+          "location": "Rotterdam"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Team Rockstars IT",
+      "description": "",
+      "address": {
+        "city": "'s Hertogenbosch",
+        "country": "Netherlands"
+      },
+      "employees": 300,
+      "vacancies": [
+        {
+          "id": 1,
+          "title": "Frontend Developer",
+          "description": "Looking for a frontend developer",
+          "hours": 40,
+          "location": "Rotterdam"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Google",
+      "description": "Google LLC is an American multinational technology company focusing on online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, artificial intelligence, and consumer electronics.",
+      "address": {
+        "city": "California",
+        "country": "United States"
+      },
+      "employees": 140000,
+      "vacancies": [
+        {
+          "id": 1,
+          "title": "Frontend Developer",
+          "description": "Looking for a frontend developer",
+          "hours": 40,
+          "location": "Rotterdam"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Apple",
+      "description": "Apple Inc. is an American multinational technology company headquartered in Cupertino, California. Apple is the largest technology company by revenue, totaling US$394.3 billion in 2022. As of March 2023, Apple is the world's biggest company by market capitalization.",
+      "address": {
+        "city": "California",
+        "country": "United States"
+      },
+      "employees": 164000,
+      "vacancies": [
+        {
+          "id": 1,
+          "title": "Frontend Developer",
+          "description": "Looking for a frontend developer",
+          "hours": 40,
+          "location": "Rotterdam"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Microsoft",
+      "description": "Microsoft Corporation is an American multinational technology corporation headquartered in Redmond, Washington. Microsoft's best-known software products are the Windows line of operating systems, the Microsoft Office suite, and the Internet Explorer and Edge web browsers. ",
+      "address": {
+        "city": "Washington",
+        "country": "United States"
+      },
+      "employees": 140000,
+      "vacancies": [
+        {
+          "id": 1,
+          "title": "Frontend Developer",
+          "description": "Looking for a frontend developer",
+          "hours": 40,
+          "location": "Rotterdam"
+        }
+      ]
+    }
+  ]
+}
